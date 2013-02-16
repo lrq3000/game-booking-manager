@@ -35,7 +35,7 @@ FEATURES
 --------
 
 
-- Servers administration features:
+### Servers administration features:
 Automatically generate and manage the following parameters:
     * Date, time and duration of a booking
     * Server private password
@@ -48,8 +48,7 @@ Automatically generate and manage the following parameters:
     * Automatic hard restart (kill+restart server) or soft restart (map_restart) depending on the context
     * Special accounts
 
-
-- User's GUI features:
+### User's GUI features:
     * Human-readable password generator: is provided to generate secure but easily memorizable server's password (g_password) and user's account's password.
     * Integrated public events calendar: to show all the bookings and their informations (useful for spectators and events organizators).
     * Timezone selector: for user to quickly and easierly manage bookings.
@@ -59,8 +58,7 @@ Automatically generate and manage the following parameters:
     * User can choose to enable GTV or not (spectators), and even to show the event publicly in the agenda or hide it (only the date and hour will be shown, but no other info).
     * Can cancel a booking anytime (though only if not happening in the past or today).
 
-
-- Moderation features:
+### Moderation features:
     * Automatic regularization of users (based on their IP, username, clan name, captcha, or closed registration, etc...) even when enabling open registration (no moderation).
     * Optional ReCaptcha for booking submission.
     * Open registration (no registration required to book) or closed registration (you can create user's accounts).
@@ -69,8 +67,7 @@ Automatically generate and manage the following parameters:
     * Logging facilities to track abuses (usernames and clans are logged, as well as the date and time when the booking was registered).
     * Automatic email MX validation to check if that's a valid email.
 
-
-- Admin GUI:
+### Admin GUI:
     * Admin web panel to manage users and clans when closed registration is enabled, with automatic user's password generation and email sending with all infos.
     * Fully configurable gamemods and gametypes available.
     * Fully configurable parameters for booking (duration, max date for booking, number of slots per day, etc...).
