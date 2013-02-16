@@ -36,7 +36,6 @@ FEATURES
 
 
 ### Servers administration features:
-Automatically generate and manage the following parameters:
     * Date, time and duration of a booking
     * Server private password
     * Referee password
@@ -47,6 +46,7 @@ Automatically generate and manage the following parameters:
     * Private booking: no info shown to the public
     * Automatic hard restart (kill+restart server) or soft restart (map_restart) depending on the context
     * Special accounts
+    Note: all of the above parameters are automatically generated and managed.
 
 ### User's GUI features:
     * Human-readable password generator: is provided to generate secure but easily memorizable server's password (g_password) and user's account's password.
