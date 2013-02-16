@@ -136,6 +136,8 @@ Yes you can in the $mods array in the config file: every parameter will be added
 
 For example, if you add "vm" => "0" it will add vm=0 in the slotsfile. If you use the companion script oa-game-rotator.py, it will automatically be sent as a commandline argument to oamps.sh.
 
+But this is not limited to a specific set of parameters: you can add anything you want. For example: "toto"=>"titi"
+
 This way, you can add special arguments for your needs, for example the homepath, basepath, exec of special parameters, etc...
 
 CONTACT
