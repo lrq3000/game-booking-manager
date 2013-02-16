@@ -92,6 +92,7 @@ STRUCTURE
 - jobs/ -- Contains the generated slots/weeks/users/clans files
 - lib.js -- Library of client's interactions functions (eg: autodetect timezone)
 - lib.php -- Library of critically necessary functions for managing bookings
+- lib/ -- Third-party libraries which provide some extra functionnalities and convenience (like the ckeditor for the event description), HTMLPurifier to filter out the description field
 - password-gen.js -- Human-readable password generator for server's password
 - recaptchalib.php -- Google's ReCaptcha library (you should update it to the latest version)
 - *.gif *.jpg *.png -- Images, not necessary, can be changed
