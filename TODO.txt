@@ -1,0 +1,18 @@
+GAME BOOKING MANAGER TODO
+=========================
+
+= Important:
+Nothing here!
+
+= Possibly/Never:
+? Add an edit booking function (can just cancel and book again meanwhile)
+? AJAX slots collision check
+? Start date and end date for users privileges (particularly useful for unlimited user for limited time events such as leagues organization)
+? "Change password" form (just check old password and input new password for given username. Send a confirmation code by mail too?)
+
+= Unfixed bugs:
+* Sometimes, using previous nav (from browser) in booking form makes the date go one day earlier because of timezone (when field timezone > field time)
+-> Solution: this happens because in the application, $_POST["start_date"] gets shifted relative to $_POST["timezone"]. To fix this problem, we would have to use another variable (a copy of $_POST["start_date"]) to avoid this glitch. This implies a lot of changes of variables, so this stays unfixed for now.
+
+* If there are two consecutive unconfirmed booking, and the first one gets cancelled, then the first slot of the second booking is not reserved anymore (could be reserved by someone else in the meantime). But confirmation for the second booking solve the problem (successfully book even the unreserved slot). Does not happens if the second event is confirmed.
+-> Solution: the problem resides in the fact that the application can't know if the reserved slot belongs only to the first event (soft_restart) or also to a second event, so the solution consists in adding an ID of reservation (confirmation code?) to the slots file, just after reserved. Not implemented yet because it complicates a lot the code for only a slight improvement (the bug is very rare and relatively benign, it doesn't flaw out the whole system, but may only compromise an unconfirmed event).

@@ -1,0 +1,56 @@
+GAME BOOKING MANAGER CHANGELOG
+==============================
+
+From v0.0.1 to v1.4.0: from 2011-12-29 to 2013-02-16
+----------------------------------------------------
+x agpl v3 small logo? http://www.gnu.org/graphics/license-logos.fr.html
+x add mail adress to contact for license (not necessary)?
+x add extended preambule on every file? http://www.gnu.org/licenses/gpl-howto.html
+x NO space in sv_password -> spaces are accepted ingame
+x add ref password auto generated
+x smtp send in htaccess (no need yet)
+x== comptes unlimited:
+x ajouter field yes/no dans users.txt
+x config.php usersaccount=yes/no/optional
+x cas: password field vide, password field rempli
+x Question : user select pas trop give away ? preferer text field simple ?
+x== timezone
+x pour calendar, utiliser un strtotime en combinant date et time? use the same methods in form?
+x== captcha
+x Delete link note: after the deletion of the event, you will be allowed to book again the time you
+x Delete ne fonctionne pas pour les évènements passés ou en cours today (de toutes facons on peut plus booker today)
+x booking not confirmed can be overwritten by another booking or not? (if not then someone can abuse) - place booké (pas d'overwriting), mais slots déjà réservé pour l'ip et le clan name - bots peuvent abuser mais je peux locker (et faut passer le captcha)
+x transferer tout form dans print_options en usant d'arrays?
+x To avoid frustrating confusion I recommend always calling: date_default_timezone_set('UTC') before using strtotime().
+x bug calendar utc-0:30 (can't set to UTC afterwards) mais pas +0:30
+x VERIFY delete working
+x change admin panel filename? from booking-register.php to booking-admin.php?
+x bug: WRONG ORDER in dates in calendar - les 1x sont placés avant les 0x? Padding of 0 in the compare?
+x weekfile rajouter date_added (with time) reservation faite (for logging purposes)
+x cancel form (to cancel a booking with just the code)
+x UTC time in mail
+x dans mail user creation, unlimited pas de limite
+x autodetect timezone javascript
+x calendar js: quand le 1er tombe sur un dimanche, invisible (mais on peut toujours choisir dans le select)
+letter of day shift
+x Qu'est ce qui se passe quand on essaie de reserver dans la derniere semaine ou la premiere semaine de l'année? Normalement ok grace a strtotime et année.
+pas ok, manque des dates...
+et pas derniere week
+x booking-calendar pas de 31 ni 1
+x 2012-01-01 mis dans clantrain-2012-week52 (but slot ok? because of date)
+2011-01-01 bug
+2016-01-01 bug
+2017-01-01 missed too
+2018-01-01 buggy
+x transposer dates week pour tout les modules qui utilisent weekfile (en faire une fonction)
+x previous slots get DELETED!
+x consecutive delete bugfix: deja verifier si ca arrive avec events confirme (ce serait balot) et verif si apres ce slot un autre est defini (la ou dans next slotfile), si c'est le cas ne pas le delete (le tout dernier ou il devrait y avoir un restart_soft)
+x LICENCE?
+x README? Should work for any game (game rotator works for any ioquake3 based game, but for other engines you only need to make another game rotator, this gui script can be kept intact).
+structure and function of files
+mechanism and how it works with game rotator and oamps.sh
+x bug retour a la form apres confirmation, timezone set to 0
+x Booking-form add optional website field (to link to an external article related to the event)
+x Booking-form add optional title and description/notes field (to add more informations about the event)
+x== Gametype
+x rajouter gametype dans config (au lieu de "as" => "Aftershock" faire un array: array("name" => "Aftershock elimination", "gamemod" => "as", "config" => "config-elimination.cfg")

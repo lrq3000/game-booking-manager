@@ -1,0 +1,5 @@
+Options -Indexes
+
+#be careful, no space between , and allow
+order deny,allow
+deny from all
