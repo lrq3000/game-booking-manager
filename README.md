@@ -34,6 +34,7 @@ Note: this application will NOT manage the game server for you, it will only man
 FEATURES
 --------
 
+
 - Servers administration features:
 Automatically generate and manage the following parameters:
     * Date, time and duration of a booking
@@ -47,6 +48,7 @@ Automatically generate and manage the following parameters:
     * Automatic hard restart (kill+restart server) or soft restart (map_restart) depending on the context
     * Special accounts
 
+
 - User's GUI features:
     * Human-readable password generator: is provided to generate secure but easily memorizable server's password (g_password) and user's account's password.
     * Integrated public events calendar: to show all the bookings and their informations (useful for spectators and events organizators).
@@ -57,6 +59,7 @@ Automatically generate and manage the following parameters:
     * User can choose to enable GTV or not (spectators), and even to show the event publicly in the agenda or hide it (only the date and hour will be shown, but no other info).
     * Can cancel a booking anytime (though only if not happening in the past or today).
 
+
 - Moderation features:
     * Automatic regularization of users (based on their IP, username, clan name, captcha, or closed registration, etc...) even when enabling open registration (no moderation).
     * Optional ReCaptcha for booking submission.
@@ -65,6 +68,7 @@ Automatically generate and manage the following parameters:
     * Open list (free text input) or closed list of clan names (so that only those clans leaders can book).
     * Logging facilities to track abuses (usernames and clans are logged, as well as the date and time when the booking was registered).
     * Automatic email MX validation to check if that's a valid email.
+
 
 - Admin GUI:
     * Admin web panel to manage users and clans when closed registration is enabled, with automatic user's password generation and email sending with all infos.
@@ -104,6 +108,7 @@ The booking of a server has been splitted in two applications:
 2. Applying the bookings to the game servers. This application should be private and unaccessible at all to the public (for security measures).
 
 The application of such a strategy can be concretely applied following these steps:
+
 1. This application generates and manages valid slots files.
 2. Remotely download these slots files using the download script.
 3. Use a Game Rotator script server-side, on the server that hosts the games servers, that can parse the slots files (pretty easy: first number is the number of slots, all the others are actual slots), and launch commands.
