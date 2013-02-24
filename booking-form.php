@@ -753,7 +753,7 @@ if (empty($_POST["submit"])) {
                                 // ADDITIONAL DATA
                                 'title' => $purifier->purify(str_replace($delimiter, '', $_POST['title'])),
                                 'website' => $purifier->purify($_POST['website']),
-                                'description' => str_replace($delimiter, '', htmlspecialchars(str_replace(array("\r\n", "\r"), '', $purifier->purify($_POST['description'])))), // purify, and also remove the $delimiter from the html input, and remove all line returns
+                                'description' => str_replace($delimiter, '', str_replace(array("\r\n", "\r", "\n", "\n\r"), '', htmlspecialchars($purifier->purify($_POST['description'])))), // purify, and also remove the $delimiter from the html input, and remove all line returns
 
                                 // TIMESTAMP (creation date)
 				'date_added' => date('Y-m-d H:i'),
